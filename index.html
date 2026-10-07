@@ -1532,6 +1532,141 @@
       .gold-divider { margin-bottom: 20px; }
       .contact-grid { margin-top: 36px; }
     }
+
+    /* ── SECTORS SLIDESHOW ─────────────────────────────────────────── */
+    #sectors {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 520px;
+      background: #000;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+      pointer-events: none;
+    }
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .slide-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(7,18,48,0.72) 0%,
+        rgba(7,18,48,0.18) 45%,
+        transparent 100%
+      );
+    }
+    .slide-caption {
+      position: absolute;
+      bottom: 56px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      pointer-events: none;
+    }
+    .slide-caption-label {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .slide-caption-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.5);
+    }
+    /* Arrows */
+    .slide-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid rgba(201,168,76,0.6);
+      background: rgba(7,18,48,0.55);
+      color: var(--gold);
+      font-size: 1.5rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .slide-arrow:hover {
+      background: rgba(201,168,76,0.25);
+      border-color: var(--gold);
+    }
+    .slide-prev { left: 20px; }
+    .slide-next { right: 20px; }
+    /* Dots */
+    .slide-dots {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+    .slide-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid rgba(201,168,76,0.5);
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .slide-dot.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: scale(1.3);
+    }
+    /* Progress bar inside slideshow */
+    .slide-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      transition: width linear;
+      z-index: 10;
+    }
+    @media (max-width: 768px) {
+      #sectors { height: 300px; }
+      .slide-caption-title { font-size: 1.4rem; }
+      .slide-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
+      .slide-caption { bottom: 40px; }
+    }
+    @media (max-width: 480px) {
+      #sectors { height: 240px; }
+      .slide-caption-title { font-size: 1.1rem; }
+      .slide-arrow { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -1642,6 +1777,58 @@
       <div class="stat-label">Compliance Commitment</div>
     </div>
   </div>
+</section>
+
+<!-- SECTORS SLIDESHOW -->
+<section id="sectors" aria-label="Industry sectors">
+
+  <div class="slide active">
+    <img src="slide-oil.jpg" alt="Oil Trading & Production" loading="lazy" />
+    <div class="slide-overlay"></div>
+    <div class="slide-caption">
+      <div class="slide-caption-label">Energy Sector</div>
+      <div class="slide-caption-title">Oil Trading &amp; Production</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="slide-coal.jpg" alt="Coal Mining & Export" loading="lazy" />
+    <div class="slide-overlay"></div>
+    <div class="slide-caption">
+      <div class="slide-caption-label">Mining Sector</div>
+      <div class="slide-caption-title">Coal Mining &amp; Export</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="slide-gas.jpg" alt="Natural Gas & LNG" loading="lazy" />
+    <div class="slide-overlay"></div>
+    <div class="slide-caption">
+      <div class="slide-caption-label">Gas Sector</div>
+      <div class="slide-caption-title">Natural Gas &amp; LNG</div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="slide-commodity.jpg" alt="Commodity Trading" loading="lazy" />
+    <div class="slide-overlay"></div>
+    <div class="slide-caption">
+      <div class="slide-caption-label">Trading Sector</div>
+      <div class="slide-caption-title">Global Commodity Trading</div>
+    </div>
+  </div>
+
+  <button class="slide-arrow slide-prev" aria-label="Previous slide">&#8249;</button>
+  <button class="slide-arrow slide-next" aria-label="Next slide">&#8250;</button>
+
+  <div class="slide-dots">
+    <button class="slide-dot active" aria-label="Slide 1"></button>
+    <button class="slide-dot" aria-label="Slide 2"></button>
+    <button class="slide-dot" aria-label="Slide 3"></button>
+    <button class="slide-dot" aria-label="Slide 4"></button>
+  </div>
+
+  <div class="slide-progress" id="slideProgress"></div>
 </section>
 
 <!-- ABOUT -->
@@ -2370,6 +2557,66 @@
       formSuccess.style.display = 'block';
     }, 1200);
   });
+
+  /* ── SECTORS SLIDESHOW ────────────────────────────────────────────── */
+  (function() {
+    const slides = document.querySelectorAll('#sectors .slide');
+    const dots   = document.querySelectorAll('#sectors .slide-dot');
+    const prog   = document.getElementById('slideProgress');
+    const DELAY  = 4500;
+    let current  = 0;
+    let timer, progTimer;
+
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+      startProgress();
+    }
+
+    function startProgress() {
+      if (prog) {
+        prog.style.transition = 'none';
+        prog.style.width = '0%';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            prog.style.transition = 'width ' + DELAY + 'ms linear';
+            prog.style.width = '100%';
+          });
+        });
+      }
+    }
+
+    function startAuto() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), DELAY);
+    }
+
+    document.querySelector('#sectors .slide-prev').addEventListener('click', () => {
+      goTo(current - 1); startAuto();
+    });
+    document.querySelector('#sectors .slide-next').addEventListener('click', () => {
+      goTo(current + 1); startAuto();
+    });
+    dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); startAuto(); }));
+
+    /* Pause on hover */
+    document.getElementById('sectors').addEventListener('mouseenter', () => clearInterval(timer));
+    document.getElementById('sectors').addEventListener('mouseleave', () => startAuto());
+
+    /* Touch swipe */
+    let tx = 0;
+    document.getElementById('sectors').addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
+    document.getElementById('sectors').addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) > 40) { goTo(current + (dx < 0 ? 1 : -1)); startAuto(); }
+    }, {passive:true});
+
+    startProgress();
+    startAuto();
+  })();
 </script>
 <style>
   @keyframes spin { to { transform: rotate(360deg); } }
