@@ -783,6 +783,22 @@
     .leader-name { font-size: 1.05rem; color: var(--navy); margin-bottom: 4px; font-weight: 600; font-family: 'Playfair Display', serif; }
     .leader-title { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dark); font-weight: 600; margin-bottom: 14px; }
     .leader-bio { font-size: 0.83rem; color: var(--text-muted); line-height: 1.7; }
+    .leader-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 14px;
+      padding: 9px 18px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--navy-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .leader-phone:hover { opacity: 0.85; transform: translateY(-2px); }
     @media (max-width: 580px) { .leadership-grid { grid-template-columns: 1fr; } }
 
     /* ── CONTACT ── */
@@ -1321,6 +1337,10 @@
           <span class="leader-highlight-tag">Permian Basin</span>
         </div>
         <p class="leader-bio">Thomas Espy Kelly is a seasoned energy executive and entrepreneur with over four decades of leadership across oil &amp; gas exploration, production, and services. A Baylor University graduate (1977), he co-founded Baytech Inc., growing Permian Basin assets sold to Energen for $206 million. He founded United Fuel &amp; Energy (UFEN), scaling revenues from $100M to over $1 billion before its 2008 sale. He also co-founded Pro Petro Services (NYSE: PUMP) and served as founder &amp; CEO of BPZ Energy (NYSE: BPZ), achieving a $2 billion market cap through major oil discoveries in Peru and Ecuador. Thomas brings unparalleled expertise in energy asset development, international operations, and capital partnerships to South West Energy Partners, LLC.</p>
+        <a href="tel:+14326386414" class="leader-phone" aria-label="Call Thomas Kelly">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +1 (432) 638-6414
+        </a>
       </article>
       <article class="leader-card reveal reveal-delay-1">
         <div class="leader-avatar" aria-hidden="true">TB</div>
