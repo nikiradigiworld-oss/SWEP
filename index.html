@@ -721,6 +721,212 @@
       max-width: 960px;
       margin: 56px auto 0;
     }
+    /* Dr. Balan full-width featured profile */
+    .leader-featured {
+      margin-top: 32px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      overflow: hidden;
+    }
+    .leader-featured-header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 40px 40px 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 32px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .leader-featured-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 50%, rgba(201,168,76,0.08) 0%, transparent 60%);
+    }
+    .leader-featured-photo {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 4px 24px rgba(201,168,76,0.3);
+      position: relative; z-index: 1;
+    }
+    .leader-featured-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .leader-featured-meta { position: relative; z-index: 1; }
+    .leader-featured-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--white);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .leader-featured-titles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .leader-featured-title-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.4);
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: rgba(201,168,76,0.08);
+    }
+    .leader-featured-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .leader-featured-contacts a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity var(--transition), transform var(--transition);
+    }
+    .leader-featured-contacts a:hover { opacity: 0.85; transform: translateY(-2px); }
+    .leader-featured-contacts .fc-phone {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--navy-dark);
+    }
+    .leader-featured-contacts .fc-email {
+      background: transparent;
+      border: 1px solid rgba(201,168,76,0.5);
+      color: var(--gold-light);
+    }
+    .leader-featured-body { padding: 36px 40px; }
+    .lf-section-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold-dark);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .lf-bio { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 32px; }
+    .lf-quote {
+      background: var(--navy);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+    .lf-quote p {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--text-pale);
+      line-height: 1.75;
+      margin: 0;
+    }
+    .lf-quote cite { display: block; margin-top: 8px; font-size: 0.72rem; color: var(--gold); font-style: normal; font-weight: 600; letter-spacing: 0.1em; }
+    .lf-capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .lf-cap {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .lf-cap:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
+    .lf-cap strong { display: block; font-size: 0.82rem; color: var(--navy); margin-bottom: 4px; font-weight: 600; }
+    .lf-cap span { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
+    .lf-expertise-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .lf-expertise-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      padding: 5px 13px;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+    }
+    .lf-projects-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 32px;
+      font-size: 0.82rem;
+    }
+    .lf-projects-table thead tr {
+      background: var(--navy);
+      color: var(--gold);
+    }
+    .lf-projects-table thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .lf-projects-table tbody tr { border-bottom: 1px solid var(--border); }
+    .lf-projects-table tbody tr:hover { background: var(--off-white); }
+    .lf-projects-table tbody td { padding: 10px 14px; color: var(--text-dark); vertical-align: middle; }
+    .lf-projects-table .td-value { color: var(--gold-dark); font-weight: 700; white-space: nowrap; }
+    .lf-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 32px; }
+    .lf-focus-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lf-focus-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy-dark);
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .lf-regions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .lf-region {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 100px;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .lf-region::before { content: '●'; color: var(--gold); font-size: 0.5rem; }
+    @media (max-width: 768px) {
+      .leader-featured-header { grid-template-columns: 1fr; text-align: center; }
+      .leader-featured-titles, .leader-featured-contacts { justify-content: center; }
+      .leader-featured-photo { margin: 0 auto; }
+      .leader-featured-body { padding: 24px 20px; }
+      .lf-capabilities-grid { grid-template-columns: 1fr 1fr; }
+      .lf-two-col { grid-template-columns: 1fr; gap: 20px; }
+    }
+    @media (max-width: 480px) {
+      .lf-capabilities-grid { grid-template-columns: 1fr; }
+      .lf-projects-table { font-size: 0.75rem; }
+      .lf-projects-table thead th, .lf-projects-table tbody td { padding: 8px 10px; }
+    }
     .leader-card {
       background: var(--white);
       border-radius: var(--radius);
@@ -1359,28 +1565,155 @@
           +1 (432) 638-6414
         </a>
       </article>
-      <article class="leader-card reveal reveal-delay-1">
-        <div class="leader-card-photo">
-          <img src="thana-balan.jpg" alt="Dr. Thana Balan J — International Capital Partner & Trustee, South West Energy Partners LLC" />
-        </div>
-        <h3 class="leader-name">Dr. Thana Balan J</h3>
-        <p class="leader-title">International Capital Partner / Trustee</p>
-        <div class="leader-highlights">
-          <span class="leader-highlight-tag">Capital Markets</span>
-          <span class="leader-highlight-tag">International Trustee</span>
-          <span class="leader-highlight-tag">Asia Pacific</span>
-        </div>
-        <p class="leader-bio">Dr. Thana Balan J serves as International Capital Partner and Trustee of South West Energy Partners, LLC, facilitating cross-border energy commodity exchange and investment partnerships across Asian and global markets. With deep expertise in international finance, capital deployment, and energy sector investment, Dr. Balan bridges global capital with strategic energy opportunities, ensuring compliance with international banking and regulatory standards across all transactions.</p>
-        <a href="tel:+60102057421" class="leader-phone" aria-label="Call Dr. Thana Balan">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          +60 10-205 7421
-        </a>
-        <a href="mailto:Drb@swep-ginvest.com" class="leader-email" aria-label="Email Dr. Thana Balan">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          Drb@swep-ginvest.com
-        </a>
-      </article>
     </div>
+
+    <!-- Dr. Thana Balan J — Full Featured Profile -->
+    <article class="leader-featured reveal">
+      <div class="leader-featured-header">
+        <div class="leader-featured-photo">
+          <img src="thana-balan.jpg" alt="Dr. Thana Balan J — International Capital Partner & Strategic Investment Architect" />
+        </div>
+        <div class="leader-featured-meta">
+          <h3 class="leader-featured-name">Dr. Thana Balan J</h3>
+          <div class="leader-featured-titles">
+            <span class="leader-featured-title-tag">International Capital Partner</span>
+            <span class="leader-featured-title-tag">Strategic Investment Architect</span>
+            <span class="leader-featured-title-tag">Carbon Economy &amp; Sustainable Development Specialist</span>
+          </div>
+          <div class="leader-featured-contacts">
+            <a href="tel:+60102057421" class="fc-phone" aria-label="Call Dr. Thana Balan">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              +60 10-205 7421
+            </a>
+            <a href="mailto:Drb@swep-ginvest.com" class="fc-email" aria-label="Email Dr. Thana Balan">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Drb@swep-ginvest.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="leader-featured-body">
+
+        <!-- Executive Summary -->
+        <p class="lf-section-title">Executive Summary</p>
+        <p class="lf-bio">Dr. Thana Balan J is an international strategic investment architect with more than two decades of experience designing and structuring private-sector investment frameworks that support long-term economic transformation, infrastructure development, carbon economy initiatives, and sustainable national growth. Recognised for integrating international capital with national priorities by developing commercially viable models that combine advanced technology, environmental stewardship and institutional excellence. He has a proven ability to create enduring value for economies, communities and future generations through strategic partnerships and responsible investment.</p>
+
+        <!-- Leadership Philosophy -->
+        <div class="lf-quote">
+          <p>"Great outcomes arise from clarity of purpose, discipline in execution and partnerships built on trust. I believe in integrating international capital with national priorities to deliver measurable and lasting impact."</p>
+          <cite>— Dr. Thana Balan J</cite>
+        </div>
+
+        <!-- Core Strategic Capabilities -->
+        <p class="lf-section-title">Core Strategic Capabilities</p>
+        <div class="lf-capabilities-grid">
+          <div class="lf-cap">
+            <strong>Strategic Investment Architecture</strong>
+            <span>Designing long-term investment frameworks that align private capital with national development priorities and sustainable economic growth.</span>
+          </div>
+          <div class="lf-cap">
+            <strong>International Capital Mobilisation</strong>
+            <span>Accessing and structuring private capital from global investors, institutions and strategic partners for large-scale investment programmes.</span>
+          </div>
+          <div class="lf-cap">
+            <strong>Carbon Economy &amp; Climate Finance</strong>
+            <span>Developing carbon assets, climate investment solutions and financial mechanisms that create environmental and economic value.</span>
+          </div>
+          <div class="lf-cap">
+            <strong>Infrastructure &amp; Economic Development</strong>
+            <span>Planning and structuring infrastructure and industrial projects that strengthen competitiveness, resilience and long-term economic stability.</span>
+          </div>
+          <div class="lf-cap">
+            <strong>Public–Private Partnership Frameworks</strong>
+            <span>Structuring commercially viable PPP models that align public interest with private investment for long-term outcomes.</span>
+          </div>
+          <div class="lf-cap">
+            <strong>Institutional &amp; Governance Design</strong>
+            <span>Creating governance structures and policy frameworks that ensure transparency, accountability and sustainable impact.</span>
+          </div>
+        </div>
+
+        <!-- Areas of Expertise -->
+        <p class="lf-section-title">Areas of Professional Expertise</p>
+        <div class="lf-expertise-tags">
+          <span class="lf-expertise-tag">Carbon Economy &amp; Climate Finance</span>
+          <span class="lf-expertise-tag">Commodity &amp; Energy Security</span>
+          <span class="lf-expertise-tag">Maritime &amp; Port Economy</span>
+          <span class="lf-expertise-tag">Water Security &amp; Natural Capital</span>
+          <span class="lf-expertise-tag">Infrastructure Investment Planning</span>
+          <span class="lf-expertise-tag">Artificial Intelligence Applications</span>
+          <span class="lf-expertise-tag">Sustainable Finance &amp; ESG Integration</span>
+          <span class="lf-expertise-tag">Climate Technology Solutions</span>
+          <span class="lf-expertise-tag">Governance &amp; Institutional Frameworks</span>
+          <span class="lf-expertise-tag">Risk Assessment &amp; Management</span>
+          <span class="lf-expertise-tag">Cross-border Commercial Partnerships</span>
+          <span class="lf-expertise-tag">Economic Transformation Strategies</span>
+        </div>
+
+        <!-- Project Portfolio -->
+        <p class="lf-section-title">Select Project Portfolio &amp; Investment Overview</p>
+        <div style="overflow-x:auto">
+          <table class="lf-projects-table">
+            <thead>
+              <tr>
+                <th>Programme / Initiative</th>
+                <th>Value (USD)</th>
+                <th>Region</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Maritime Surveillance System (2014)</td><td class="td-value">$150M</td><td>Nigeria</td></tr>
+              <tr><td>Over The Horizon Radar — OTHR (2021)</td><td class="td-value">$35M</td><td>UAE</td></tr>
+              <tr><td>Maritime Surveillance System (2023)</td><td class="td-value">$60M</td><td>Ghana</td></tr>
+              <tr><td>Over The Horizon Radar — OTHR (2026)</td><td class="td-value">$14M</td><td>Azerbaijan</td></tr>
+              <tr><td>Petroleum &amp; Petrochemical Supply, Texas</td><td class="td-value">$2B / year</td><td>USA (Texas)</td></tr>
+              <tr><td>Purchase of Assets from American Petro Fina</td><td class="td-value">$93M</td><td>USA</td></tr>
+              <tr><td>Green Decom &amp; Ship Recycling Yard, Kuantan, Pahang</td><td class="td-value">~$65.8M</td><td>Malaysia</td></tr>
+              <tr><td>ALPS Cassava Food Security &amp; Wellness Hub</td><td class="td-value">~$489.5M</td><td>Malaysia</td></tr>
+              <tr><td>Hercules Renewable Energy Project, Sabah &amp; Pahang</td><td class="td-value">~$65.8M</td><td>Malaysia</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Strategic Focus & Regions -->
+        <div class="lf-two-col">
+          <div>
+            <p class="lf-section-title">Current Strategic Focus Areas</p>
+            <div class="lf-focus-pills">
+              <span class="lf-focus-pill">Carbon Economy</span>
+              <span class="lf-focus-pill">Water Security</span>
+              <span class="lf-focus-pill">Commodity Security</span>
+              <span class="lf-focus-pill">Maritime Security</span>
+              <span class="lf-focus-pill">Natural Capital</span>
+              <span class="lf-focus-pill">Sustainable Infrastructure</span>
+            </div>
+          </div>
+          <div>
+            <p class="lf-section-title">International Regions of Engagement</p>
+            <div class="lf-regions">
+              <span class="lf-region">Asia Pacific</span>
+              <span class="lf-region">Middle East</span>
+              <span class="lf-region">Africa</span>
+              <span class="lf-region">Europe</span>
+              <span class="lf-region">North America</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Governance Principles -->
+        <p class="lf-section-title">Governance Principles</p>
+        <div class="lf-expertise-tags">
+          <span class="lf-expertise-tag">Ethical Leadership &amp; Responsible Decision-Making</span>
+          <span class="lf-expertise-tag">Transparent Structures &amp; Financial Integrity</span>
+          <span class="lf-expertise-tag">Robust Risk Management &amp; Compliance</span>
+          <span class="lf-expertise-tag">Accountability to Stakeholders &amp; Communities</span>
+          <span class="lf-expertise-tag">Sustainable Impact &amp; Intergenerational Thinking</span>
+        </div>
+
+      </div>
+    </article>
+
   </div>
 </section>
 
