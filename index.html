@@ -799,6 +799,23 @@
       transition: opacity var(--transition), transform var(--transition);
     }
     .leader-phone:hover { opacity: 0.85; transform: translateY(-2px); }
+    .leader-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 8px;
+      padding: 9px 18px;
+      border-radius: 100px;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+    }
+    .leader-email:hover { background: rgba(201,168,76,0.1); transform: translateY(-2px); }
     @media (max-width: 580px) { .leadership-grid { grid-template-columns: 1fr; } }
 
     /* ── CONTACT ── */
@@ -1343,10 +1360,25 @@
         </a>
       </article>
       <article class="leader-card reveal reveal-delay-1">
-        <div class="leader-avatar" aria-hidden="true">TB</div>
-        <h3 class="leader-name">Dr. Thana Balan</h3>
-        <p class="leader-title">International Capital Partner &amp; Trustee</p>
-        <p class="leader-bio">Dr. Thana Balan serves as Trustee and International Capital Partner, facilitating cross-border energy commodity exchange and investment partnerships across Asian and global markets.</p>
+        <div class="leader-card-photo">
+          <img src="thana-balan.jpg" alt="Dr. Thana Balan J — International Capital Partner & Trustee, South West Energy Partners LLC" />
+        </div>
+        <h3 class="leader-name">Dr. Thana Balan J</h3>
+        <p class="leader-title">International Capital Partner / Trustee</p>
+        <div class="leader-highlights">
+          <span class="leader-highlight-tag">Capital Markets</span>
+          <span class="leader-highlight-tag">International Trustee</span>
+          <span class="leader-highlight-tag">Asia Pacific</span>
+        </div>
+        <p class="leader-bio">Dr. Thana Balan J serves as International Capital Partner and Trustee of South West Energy Partners, LLC, facilitating cross-border energy commodity exchange and investment partnerships across Asian and global markets. With deep expertise in international finance, capital deployment, and energy sector investment, Dr. Balan bridges global capital with strategic energy opportunities, ensuring compliance with international banking and regulatory standards across all transactions.</p>
+        <a href="tel:+60102057421" class="leader-phone" aria-label="Call Dr. Thana Balan">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +60 10-205 7421
+        </a>
+        <a href="mailto:Drb@swep-ginvest.com" class="leader-email" aria-label="Email Dr. Thana Balan">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Drb@swep-ginvest.com
+        </a>
       </article>
     </div>
   </div>
