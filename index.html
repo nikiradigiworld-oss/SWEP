@@ -352,7 +352,16 @@
       );
     }
     @media (max-width: 768px) {
-      .hero-photo { width: 100%; opacity: 0.22; }
+      .hero-photo { width: 100%; }
+      .hero-photo img { opacity: 0.18; }
+      .hero-photo-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(7,18,48,0.7) 0%,
+          rgba(7,18,48,0.45) 50%,
+          rgba(7,18,48,0.7) 100%
+        );
+      }
     }
     .hero-grid-lines {
       position: absolute;
@@ -1306,6 +1315,193 @@
     .fab svg { width: 20px; height: 20px; }
     .fab-phone svg { fill: white; }
     .fab-top svg { fill: var(--navy-dark); }
+
+    /* ═══════════════════════════════════════════════════
+       MOBILE REFINEMENTS — beautiful responsive layout
+    ═══════════════════════════════════════════════════ */
+
+    /* Touch optimisation */
+    a, button { -webkit-tap-highlight-color: transparent; }
+    button { touch-action: manipulation; }
+
+    /* Tighter container on very small screens */
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+    }
+
+    /* Section padding: 100px → 64px → 48px */
+    @media (max-width: 768px) {
+      #about, #services, #why, #process, #leadership, #contact {
+        padding: 64px 0;
+      }
+    }
+    @media (max-width: 480px) {
+      #about, #services, #why, #process, #leadership, #contact {
+        padding: 48px 0;
+      }
+      .services-header { margin-bottom: 36px; }
+      .why-grid, .process-steps { margin-top: 36px; }
+      .leadership-grid { margin-top: 36px; }
+    }
+
+    /* ── HERO mobile ── */
+    @media (max-width: 768px) {
+      #hero { padding: 92px 20px 72px; }
+      .hero-eyebrow::before, .hero-eyebrow::after { display: none; }
+    }
+    @media (max-width: 480px) {
+      #hero { padding: 82px 16px 60px; }
+      .hero-logo {
+        width: 110px; height: 110px;
+        margin-bottom: 20px;
+      }
+      .hero-eyebrow { font-size: 0.62rem; letter-spacing: 0.15em; margin-bottom: 16px; }
+      .hero-title { font-size: clamp(2rem, 9.5vw, 2.6rem); margin-bottom: 6px; }
+      .hero-subtitle { font-size: 0.68rem; letter-spacing: 0.14em; margin-bottom: 16px; }
+      .hero-desc { font-size: 0.92rem; margin-bottom: 28px; }
+      .hero-pills { gap: 6px; margin-bottom: 32px; }
+      .hero-pill { font-size: 0.66rem; padding: 6px 12px; }
+      .hero-actions { gap: 10px; }
+      .btn { padding: 12px 22px; font-size: 0.76rem; gap: 6px; }
+    }
+
+    /* ── NAV compact on small screens ── */
+    @media (max-width: 480px) {
+      .nav-inner { height: 60px; padding: 0 16px; }
+      .nav-logo { width: 44px; height: 44px; }
+      .nav-brand-name { font-size: 0.75rem; }
+      .nav-brand-sub { display: none; }
+    }
+
+    /* ── STATS mobile ── */
+    @media (max-width: 480px) {
+      .stat-num { font-size: 1.75rem; }
+      .stat-item { padding: 22px 12px; }
+      .stat-label { font-size: 0.62rem; }
+    }
+
+    /* ── ABOUT mobile ── */
+    @media (max-width: 768px) {
+      .about-grid { gap: 40px; }
+    }
+
+    /* ── SERVICES mobile ── */
+    @media (max-width: 480px) {
+      .service-card-top { height: 110px; }
+      .service-card-body { padding: 18px; }
+      .service-card-body h3 { font-size: 0.95rem; }
+    }
+
+    /* ── PROCESS mobile ── */
+    @media (max-width: 700px) {
+      .process-step { padding: 0 8px; }
+      .process-step-num { width: 52px; height: 52px; font-size: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .process-step h3 { font-size: 0.88rem; }
+      .process-step p { font-size: 0.78rem; }
+    }
+
+    /* ── LEADERSHIP FEATURED — polished mobile ── */
+    @media (max-width: 768px) {
+      .leader-featured { margin-top: 24px; }
+      .leader-featured-header { padding: 28px 20px 22px; gap: 18px; }
+      .leader-featured-photo { width: 96px; height: 96px; border-width: 3px; }
+      .leader-featured-name { font-size: 1.35rem; }
+      .leader-featured-title-tag { font-size: 0.6rem; padding: 3px 10px; }
+      .leader-featured-contacts a { font-size: 0.73rem; padding: 7px 13px; }
+      .leader-featured-body { padding: 24px 18px; }
+      .lf-section-title { font-size: 0.6rem; letter-spacing: 0.16em; }
+      .lf-bio { font-size: 0.87rem; line-height: 1.75; margin-bottom: 24px; }
+      .lf-quote { padding: 16px 18px; margin-bottom: 24px; }
+      .lf-quote p { font-size: 0.9rem; line-height: 1.7; }
+    }
+    @media (max-width: 480px) {
+      .leader-featured-header { padding: 22px 16px 18px; gap: 14px; }
+      .leader-featured-photo { width: 80px; height: 80px; }
+      .leader-featured-name { font-size: 1.2rem; }
+      .leader-featured-contacts { gap: 6px; }
+      .leader-featured-contacts a { font-size: 0.68rem; padding: 6px 11px; gap: 4px; }
+      .leader-featured-body { padding: 18px 14px; }
+      .lf-bio { font-size: 0.83rem; margin-bottom: 20px; }
+      .lf-quote { padding: 12px 14px; margin-bottom: 20px; }
+      .lf-quote p { font-size: 0.85rem; }
+      .lf-cap { padding: 11px 12px; }
+      .lf-cap strong { font-size: 0.78rem; }
+      .lf-cap span { font-size: 0.71rem; }
+      .lf-expertise-tag { font-size: 0.66rem; padding: 4px 10px; }
+      .lf-focus-pill { font-size: 0.66rem; padding: 5px 11px; }
+      .lf-region { font-size: 0.73rem; padding: 4px 10px; }
+      .lf-projects-table { font-size: 0.73rem; }
+      .lf-projects-table thead th,
+      .lf-projects-table tbody td { padding: 7px 8px; }
+      .lf-capabilities-grid { gap: 8px; margin-bottom: 20px; }
+      .lf-expertise-tags { gap: 6px; margin-bottom: 20px; }
+      .lf-two-col { margin-bottom: 20px; }
+    }
+
+    /* ── CONTACT mobile ── */
+    @media (max-width: 480px) {
+      .contact-info-title { font-size: 1.25rem; }
+      .contact-info > p { font-size: 0.87rem; margin-bottom: 22px; }
+      .contact-items { gap: 12px; }
+      .contact-item { padding: 12px; gap: 12px; }
+      .contact-item-icon { width: 36px; height: 36px; }
+      .contact-item-icon svg { width: 14px; height: 14px; }
+      .contact-item-body a,
+      .contact-item-body span { font-size: 0.85rem; }
+      .contact-form { padding: 22px 14px; border-top-width: 3px; }
+      .contact-form h3 { font-size: 1rem; margin-bottom: 18px; }
+      .form-group label { font-size: 0.68rem; }
+      .form-group input,
+      .form-group select,
+      .form-group textarea { padding: 11px 12px; font-size: 0.88rem; }
+      .form-submit { padding: 13px; font-size: 0.76rem; }
+    }
+
+    /* ── CREDENTIALS STRIP mobile ── */
+    @media (max-width: 480px) {
+      .cred-item { padding: 8px 10px; }
+      .cred-label { font-size: 0.55rem; }
+      .cred-value { font-size: 0.72rem; }
+    }
+
+    /* ── FOOTER mobile ── */
+    @media (max-width: 768px) {
+      footer { padding: 52px 0 0; }
+      .footer-grid { gap: 28px; margin-bottom: 36px; }
+    }
+    @media (max-width: 480px) {
+      footer { padding: 40px 0 0; }
+      .footer-grid { gap: 22px; margin-bottom: 28px; }
+      .footer-brand-name { font-size: 0.95rem; }
+      .footer-desc { font-size: 0.8rem; }
+      .footer-tagline { font-size: 0.82rem; }
+      .footer-bottom p { font-size: 0.7rem; }
+    }
+
+    /* ── FLOATING ACTIONS mobile ── */
+    @media (max-width: 480px) {
+      .floating-actions { bottom: 16px; right: 16px; gap: 8px; }
+      .fab { width: 42px; height: 42px; }
+      .fab svg { width: 18px; height: 18px; }
+    }
+
+    /* ── WHY CARDS mobile ── */
+    @media (max-width: 480px) {
+      .why-card { padding: 20px 18px; }
+      .why-num { font-size: 2rem; margin-bottom: 8px; }
+      .why-card h3 { font-size: 0.88rem; }
+      .why-card p { font-size: 0.8rem; }
+    }
+
+    /* ── SECTION TITLES mobile ── */
+    @media (max-width: 480px) {
+      .section-title { margin-bottom: 10px; }
+      .section-sub { font-size: 0.9rem; }
+      .gold-divider { margin-bottom: 20px; }
+      .contact-grid { margin-top: 36px; }
+    }
   </style>
 </head>
 <body>
