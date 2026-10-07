@@ -148,13 +148,30 @@
       flex-shrink: 0;
     }
     .nav-logo {
-      width: 40px; height: 40px;
+      width: 48px; height: 48px;
       border-radius: 50%;
       border: 2px solid var(--gold);
-      background: var(--navy-dark);
-      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 0 12px rgba(201,168,76,0.35);
     }
-    .nav-logo svg { width: 20px; height: 20px; }
+    .nav-logo img { width: 100%; height: 100%; object-fit: cover; }
+    /* Hero logo */
+    .hero-logo {
+      width: clamp(120px, 18vw, 180px);
+      height: clamp(120px, 18vw, 180px);
+      border-radius: 50%;
+      border: 4px solid var(--gold);
+      overflow: hidden;
+      margin: 0 auto 28px;
+      box-shadow: 0 0 40px rgba(201,168,76,0.4), 0 0 80px rgba(201,168,76,0.15);
+      animation: logoPulse 3s ease-in-out infinite;
+    }
+    .hero-logo img { width: 100%; height: 100%; object-fit: cover; }
+    @keyframes logoPulse {
+      0%, 100% { box-shadow: 0 0 40px rgba(201,168,76,0.4), 0 0 80px rgba(201,168,76,0.15); }
+      50%       { box-shadow: 0 0 60px rgba(201,168,76,0.6), 0 0 120px rgba(201,168,76,0.25); }
+    }
     .nav-brand-text { line-height: 1.15; }
     .nav-brand-name { font-size: 0.82rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; }
     .nav-brand-sub { font-size: 0.6rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; }
@@ -1291,8 +1308,8 @@
 <nav id="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#hero" class="nav-brand" aria-label="South West Energy Partners home">
-      <div class="nav-logo" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L8 8H4L6 14L2 18H10L12 22L14 18H22L18 14L20 8H16L12 2Z" fill="#c9a84c" opacity="0.9"/><circle cx="12" cy="13" r="3" fill="#0d1e4a"/></svg>
+      <div class="nav-logo">
+        <img src="logo.jpg" alt="South West Energy Partners LLC logo" />
       </div>
       <div class="nav-brand-text">
         <span class="nav-brand-name">South West Energy Partners</span>
@@ -1340,6 +1357,9 @@
   </div>
   <div class="hero-grid-lines" aria-hidden="true"></div>
   <div class="hero-content">
+    <div class="hero-logo">
+      <img src="logo.jpg" alt="South West Energy Partners LLC" />
+    </div>
     <div class="hero-eyebrow">Established 2014 &bull; Delaware LLC</div>
     <h1 class="hero-title">South West<br><span class="highlight">Energy Partners</span></h1>
     <p class="hero-subtitle">LLC &nbsp;&bull;&nbsp; Global Energy Solutions</p>
