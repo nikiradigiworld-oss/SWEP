@@ -1553,14 +1553,17 @@
       overflow: hidden;
       width: 100%;
       height: 520px;
-      background: #000;
+      background: #071230;
+      display: block;
     }
     .slide {
       position: absolute;
-      inset: 0;
+      top: 0; right: 0; bottom: 0; left: 0;
+      width: 100%; height: 100%;
       opacity: 0;
       transition: opacity 0.9s ease;
       pointer-events: none;
+      overflow: hidden;
     }
     .slide.active {
       opacity: 1;
@@ -1575,13 +1578,14 @@
     }
     .slide-overlay {
       position: absolute;
-      inset: 0;
+      top: 0; right: 0; bottom: 0; left: 0;
       background: linear-gradient(
         to top,
         rgba(7,18,48,0.72) 0%,
         rgba(7,18,48,0.18) 45%,
         transparent 100%
       );
+      z-index: 1;
     }
     .slide-caption {
       position: absolute;
@@ -1590,6 +1594,7 @@
       right: 0;
       text-align: center;
       pointer-events: none;
+      z-index: 2;
     }
     .slide-caption-label {
       display: inline-block;
@@ -1671,15 +1676,18 @@
       z-index: 10;
     }
     @media (max-width: 768px) {
-      #sectors { height: 300px; }
+      #sectors { height: 56vw; min-height: 240px; max-height: 420px; }
       .slide-caption-title { font-size: 1.4rem; }
       .slide-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
-      .slide-caption { bottom: 40px; }
+      .slide-caption { bottom: 36px; }
     }
     @media (max-width: 480px) {
-      #sectors { height: 240px; }
-      .slide-caption-title { font-size: 1.1rem; }
+      #sectors { height: 60vw; min-height: 200px; max-height: 300px; }
+      .slide-caption-title { font-size: 1.05rem; }
+      .slide-caption-label { font-size: 0.55rem; }
       .slide-arrow { display: none; }
+      .slide-caption { bottom: 28px; }
+      .slide-dots { bottom: 10px; }
     }
   </style>
 </head>
@@ -1797,7 +1805,7 @@
 <section id="sectors" aria-label="Industry sectors">
 
   <div class="slide active">
-    <img src="slide-oil.jpg" alt="Oil Trading & Production" loading="lazy" />
+    <img src="slide-oil.jpg" alt="Oil Trading & Production" />
     <div class="slide-overlay"></div>
     <div class="slide-caption">
       <div class="slide-caption-label">Energy Sector</div>
@@ -1806,7 +1814,7 @@
   </div>
 
   <div class="slide">
-    <img src="slide-coal.jpg" alt="Coal Mining & Export" loading="lazy" />
+    <img src="slide-coal.jpg" alt="Coal Mining & Export" />
     <div class="slide-overlay"></div>
     <div class="slide-caption">
       <div class="slide-caption-label">Mining Sector</div>
@@ -1815,7 +1823,7 @@
   </div>
 
   <div class="slide">
-    <img src="slide-gas.jpg" alt="Natural Gas & LNG" loading="lazy" />
+    <img src="slide-gas.jpg" alt="Natural Gas & LNG" />
     <div class="slide-overlay"></div>
     <div class="slide-caption">
       <div class="slide-caption-label">Gas Sector</div>
@@ -1824,7 +1832,7 @@
   </div>
 
   <div class="slide">
-    <img src="slide-commodity.jpg" alt="Commodity Trading" loading="lazy" />
+    <img src="slide-commodity.jpg" alt="Commodity Trading" />
     <div class="slide-overlay"></div>
     <div class="slide-caption">
       <div class="slide-caption-label">Trading Sector</div>
