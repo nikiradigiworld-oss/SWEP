@@ -718,7 +718,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
-      max-width: 820px;
+      max-width: 960px;
       margin: 56px auto 0;
     }
     .leader-card {
@@ -742,6 +742,43 @@
       font-size: 1.8rem;
       color: var(--gold);
       font-weight: 700;
+      overflow: hidden;
+    }
+    .leader-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .leader-card-photo {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      overflow: hidden;
+      margin: 0 auto 16px;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.25);
+    }
+    .leader-card-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .leader-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin: 10px 0 14px;
+    }
+    .leader-highlight-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold-dark);
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.25);
+      padding: 3px 10px;
+      border-radius: 100px;
     }
     .leader-name { font-size: 1.05rem; color: var(--navy); margin-bottom: 4px; font-weight: 600; font-family: 'Playfair Display', serif; }
     .leader-title { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-dark); font-weight: 600; margin-bottom: 14px; }
@@ -1272,10 +1309,18 @@
     </div>
     <div class="leadership-grid">
       <article class="leader-card reveal">
-        <div class="leader-avatar" aria-hidden="true">TK</div>
-        <h3 class="leader-name">Thomas E. Kelly</h3>
-        <p class="leader-title">President &amp; Sole Member</p>
-        <p class="leader-bio">As President and founding member of South West Energy Partners, LLC, Thomas E. Kelly brings decades of experience in energy sector leadership, contract execution, and strategic financial management from Midland, Texas.</p>
+        <div class="leader-card-photo">
+          <img src="thomas-kelly.jpg" alt="Thomas Espy Kelly — Executive Chairman, South West Energy Partners LLC" />
+        </div>
+        <h3 class="leader-name">Thomas Espy Kelly</h3>
+        <p class="leader-title">Executive Chairman &amp; Founder</p>
+        <div class="leader-highlights">
+          <span class="leader-highlight-tag">NYSE: BPZ</span>
+          <span class="leader-highlight-tag">NYSE: PUMP</span>
+          <span class="leader-highlight-tag">Baylor University</span>
+          <span class="leader-highlight-tag">Permian Basin</span>
+        </div>
+        <p class="leader-bio">Thomas Espy Kelly is a seasoned energy executive and entrepreneur with over four decades of leadership across oil &amp; gas exploration, production, and services. A Baylor University graduate (1977), he co-founded Baytech Inc., growing Permian Basin assets sold to Energen for $206 million. He founded United Fuel &amp; Energy (UFEN), scaling revenues from $100M to over $1 billion before its 2008 sale. He also co-founded Pro Petro Services (NYSE: PUMP) and served as founder &amp; CEO of BPZ Energy (NYSE: BPZ), achieving a $2 billion market cap through major oil discoveries in Peru and Ecuador. Thomas brings unparalleled expertise in energy asset development, international operations, and capital partnerships to South West Energy Partners, LLC.</p>
       </article>
       <article class="leader-card reveal reveal-delay-1">
         <div class="leader-avatar" aria-hidden="true">TB</div>
