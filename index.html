@@ -1366,11 +1366,126 @@
       color: rgba(205,213,224,0.5);
       line-height: 1.55;
     }
+    .footer-partner-reg {
+      font-size: 0.68rem;
+      color: rgba(201,168,76,0.55);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
     .footer-partner-phone {
       font-size: 0.72rem;
       color: rgba(201,168,76,0.7);
       margin-top: 3px;
     }
+
+    /* ── ASSOCIATED PARTNERS ── */
+    .partners-section {
+      background: #060d1f;
+      padding: 72px 0 64px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+    .partners-section-head { text-align: center; margin-bottom: 48px; }
+    .partners-section-head .section-label { color: var(--gold); display: block; margin-bottom: 10px; }
+    .partners-section-head h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: #fff;
+      font-weight: 700;
+    }
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    .partner-card {
+      background: #0d1e4a;
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .partner-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+    }
+    .partner-browser {
+      background: #050c1e;
+      padding: 7px 10px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .browser-dots { display: flex; gap: 4px; }
+    .browser-dots span { display: inline-block; width: 7px; height: 7px; border-radius: 50%; }
+    .browser-dots span:nth-child(1) { background: #ff5f57; }
+    .browser-dots span:nth-child(2) { background: #febc2e; }
+    .browser-dots span:nth-child(3) { background: #28c840; }
+    .browser-url {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      border-radius: 4px;
+      font-size: 0.58rem;
+      color: rgba(255,255,255,0.35);
+      padding: 3px 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .partner-body {
+      padding: 22px 14px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+    }
+    .partner-favicon {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.05);
+      padding: 4px;
+    }
+    .partner-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 5px;
+    }
+    .partner-domain {
+      font-size: 0.6rem;
+      color: rgba(201,168,76,0.55);
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+    .partner-visit {
+      margin-top: auto;
+      font-size: 0.62rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 4px;
+      padding: 6px 16px;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+    .partner-card:hover .partner-visit {
+      background: var(--gold);
+      color: #060d1f;
+      border-color: var(--gold);
+    }
+    @media (max-width: 1024px) { .partners-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 640px) { .partners-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+    @media (max-width: 380px) { .partners-grid { grid-template-columns: 1fr; } }
 
     /* ── FLOATING ACTIONS ── */
     .floating-actions {
@@ -2548,6 +2663,84 @@
 
 </main>
 
+<!-- ASSOCIATED PARTNERS -->
+<section id="partners" class="partners-section" aria-labelledby="partners-title">
+  <div class="container">
+    <div class="partners-section-head">
+      <span class="section-label">Global Network</span>
+      <h2 id="partners-title">Our Associated Partners</h2>
+    </div>
+    <div class="partners-grid">
+
+      <a class="partner-card" href="https://www.wtamu.edu/" target="_blank" rel="noopener noreferrer">
+        <div class="partner-browser">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">www.wtamu.edu</div>
+        </div>
+        <div class="partner-body">
+          <img class="partner-favicon" src="https://www.google.com/s2/favicons?domain=wtamu.edu&sz=128" alt="WTAMU" />
+          <div class="partner-name">West Texas A&amp;M University</div>
+          <div class="partner-domain">wtamu.edu</div>
+          <div class="partner-visit">Visit Site</div>
+        </div>
+      </a>
+
+      <a class="partner-card" href="https://www.hannathonpetroleum.com/" target="_blank" rel="noopener noreferrer">
+        <div class="partner-browser">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">www.hannathonpetroleum.com</div>
+        </div>
+        <div class="partner-body">
+          <img class="partner-favicon" src="https://www.google.com/s2/favicons?domain=hannathonpetroleum.com&sz=128" alt="Hannathon Petroleum" />
+          <div class="partner-name">Hannathon Petroleum</div>
+          <div class="partner-domain">hannathonpetroleum.com</div>
+          <div class="partner-visit">Visit Site</div>
+        </div>
+      </a>
+
+      <a class="partner-card" href="https://www.mountainlp.com/" target="_blank" rel="noopener noreferrer">
+        <div class="partner-browser">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">www.mountainlp.com</div>
+        </div>
+        <div class="partner-body">
+          <img class="partner-favicon" src="https://www.google.com/s2/favicons?domain=mountainlp.com&sz=128" alt="Mountain LP" />
+          <div class="partner-name">Mountain LP</div>
+          <div class="partner-domain">mountainlp.com</div>
+          <div class="partner-visit">Visit Site</div>
+        </div>
+      </a>
+
+      <a class="partner-card" href="https://www.highpeakenergy.com/" target="_blank" rel="noopener noreferrer">
+        <div class="partner-browser">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">www.highpeakenergy.com</div>
+        </div>
+        <div class="partner-body">
+          <img class="partner-favicon" src="https://www.google.com/s2/favicons?domain=highpeakenergy.com&sz=128" alt="High Peak Energy" />
+          <div class="partner-name">High Peak Energy</div>
+          <div class="partner-domain">highpeakenergy.com</div>
+          <div class="partner-visit">Visit Site</div>
+        </div>
+      </a>
+
+      <a class="partner-card" href="https://moonvera.space/" target="_blank" rel="noopener noreferrer">
+        <div class="partner-browser">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">moonvera.space</div>
+        </div>
+        <div class="partner-body">
+          <img class="partner-favicon" src="https://www.google.com/s2/favicons?domain=moonvera.space&sz=128" alt="Moonvera" />
+          <div class="partner-name">Moonvera Infra Private Limited</div>
+          <div class="partner-domain">moonvera.space</div>
+          <div class="partner-visit">Visit Site</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="container">
@@ -2594,7 +2787,7 @@
       <div class="footer-partner-item">
         <img src="moonvera-logo.jpeg" alt="Moonvera Infra Private Limited" class="footer-partner-logo" />
         <div>
-          <div class="footer-partner-name">Moonvera Infra Private Limited</div>
+          <div class="footer-partner-name">Moonvera Infra Private Limited <span class="footer-partner-reg">/ Doc No.136/2026 Book IV</span></div>
           <div class="footer-partner-addr">New No.5, Old No.16, Door No.3C1-1, Devaraj Pillai Street,<br>West Tambaram, Chennai &ndash; 600 045</div>
           <div class="footer-partner-phone">+91 63851 06208</div>
         </div>
